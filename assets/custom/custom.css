@@ -1,0 +1,56 @@
+#currentDate {
+ color: #fff;
+}
+
+#currentTime {
+ color: #fff;
+}
+
+.col-md-6 {}
+
+ul.header_list {
+ color: #fff;
+}
+.bottom_header.dark_skin.main_menu_uppercase {
+ border-bottom: 1px solid #14452f;
+}
+.overly {
+ background: #2630648f;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+}
+
+.slider_color{
+ color: #fff !important;
+}
+.slider_btn{
+ background: #fff !important;
+}
+
+/* -------- notice -----  */
+.top_scroll {
+ display: flex;
+ margin: 15px 0 0 0;
+ border: 1px solid;
+}
+
+.top_scrool_1 {
+ background: #14452f;
+ padding: 10px;
+ text-align: center;
+ font-size: 20px;
+ font-weight: 600;
+ color: #fff;
+}
+
+.top_scrool_2 {
+ padding: 10px;
+ font-weight: 600;
+}
+
+marquee a {
+ color: #14452f;
+}
