@@ -50,4 +50,5 @@ updateTime();
 // Update time every second
 setInterval(updateTime, 1000);
 
-// time show code end here ------------------------------------  
+// time show code end here ------------------------------------
+

@@ -11,9 +11,11 @@
 ul.header_list {
  color: #fff;
 }
+
 .bottom_header.dark_skin.main_menu_uppercase {
  border-bottom: 1px solid #14452f;
 }
+
 .overly {
  background: #2630648f;
  width: 100%;
@@ -23,10 +25,11 @@ ul.header_list {
  height: 100%;
 }
 
-.slider_color{
+.slider_color {
  color: #fff !important;
 }
-.slider_btn{
+
+.slider_btn {
  background: #fff !important;
 }
 
@@ -53,4 +56,263 @@ ul.header_list {
 
 marquee a {
  color: #14452f;
+}
+
+/* // department sectin css  */
+
+.department-card {
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ border: 1px solid #14452f;
+}
+
+.card-img-top {
+ width: 500px;
+}
+
+.department-card .card-body {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ transition: transform 0.5s ease, background-color 0.5s ease;
+ background: #14452f;
+ color: #fff;
+}
+
+.department-card .show-more {
+ display: none;
+ transition: opacity 0.5s ease;
+ font-size: 0.8rem;
+ transition: all 0.5s;
+}
+
+.department-card:hover .card-body {
+ /* transform: translateY(-30%); */
+
+ background-color: #14452f;
+ color: #fff;
+ transition: 0.5s;
+}
+
+.department-card:hover .show-more {
+ display: block;
+ opacity: 1;
+ transition: 0.5s;
+}
+
+.card-body h5 {
+ transition: transform 0.5s ease;
+}
+
+.department-card:hover .card-body h5 {
+ transform: translateY(0px);
+}
+
+.card-img-top {
+ width: 100%;
+ height: 250px;
+}
+
+/* heading animation  */
+
+.section-title {
+ position: relative;
+ font-size: 2.5rem;
+ font-weight: bold;
+ color: #0056b3;
+ text-transform: uppercase;
+ letter-spacing: 0.1rem;
+ margin-bottom: 2rem;
+ display: inline-block;
+ background: #f8f9fa;
+ padding: 0 20px;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.section-title::before,
+.section-title::after {
+ content: '';
+ position: absolute;
+ height: 5px;
+ background-color: #0056b3;
+ width: 40px;
+ top: 50%;
+ transform: translateY(-50%);
+ animation: animate-line 2s infinite;
+}
+
+.section-title::before {
+ left: -50px;
+}
+
+.section-title::after {
+ right: -50px;
+}
+
+.section-title span {
+ position: relative;
+}
+
+.section-title span::before,
+.section-title span::after {
+ content: '';
+ position: absolute;
+ height: 5px;
+ background-color: #0056b3;
+ width: 50%;
+ animation: animate-line 2s infinite;
+}
+
+.section-title span::before {
+ top: -10px;
+ left: 0;
+}
+
+.section-title span::after {
+ bottom: -10px;
+ right: 0;
+}
+
+@keyframes animate-line {
+ 0% {
+  width: 0;
+ }
+
+ 50% {
+  width: 100%;
+ }
+
+ 100% {
+  width: 0;
+ }
+}
+
+@media (max-width: 768px) {
+ .section-title {
+  font-size: 20px;
+ }
+
+ .section-title::before,
+ .section-title::after {
+  width: 15px;
+ }
+}
+
+/* ------ why choose section -----  */
+.choose_overly {
+ background: #0000007d;
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.card_box {
+ position: relative;
+ z-index: 2;
+ /* Higher z-index to be above the overlay */
+ background: white;
+ /* Optional: Add background to card box */
+ padding: 30px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card_box_text p {
+ font-size: 15px;
+}
+
+/* ---------- Start count sectin ------  */
+.stat-item {
+ background: #fff;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ padding: 20px;
+ transition: transform 0.3s, box-shadow 0.3s;
+ text-align: center;
+ margin: 15px 0;
+}
+
+.stat-item:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-item img {
+ width: 50px;
+}
+
+.stat-item h3 {
+ margin-top: 15px;
+ font-size: 24px;
+}
+
+.stat-item p {
+ margin-top: 5px;
+ font-size: 16px;
+}
+
+.request-info {
+ background: #e8e8e8;
+ padding: 20px;
+ border-radius: 8px;
+ margin-top: 15px;
+}
+
+.request-info input,
+.request-info textarea {
+ margin-bottom: 15px;
+}
+
+/* ------------ blog and event sectin -----------  */
+.blog-btn {
+ color: #0056b3;
+}
+
+.blog-btn:hover {
+ color: #14452f;
+ transition: 0.5s;
+}
+
+.left-top {
+ position: fixed;
+ top: 200px;
+ left: -61px;
+ /* width: 100px; */
+ background: #14452f;
+ z-index: 2;
+ transform: translate(10px, 10px);
+ transform: rotate(90deg);
+ /* right: 50px; */
+ color: #fff;
+}
+
+.left-top h4 {
+ color: #fff;
+ font-size: 19px;
+ padding: 6px 10px 0 10px;
+ font-weight: 400;
+}
+.left-bottom {
+ position: fixed;
+ top: 350px;
+ left: -61px;
+ /* width: 100px; */
+ background: red;
+ z-index: 2;
+ transform: translate(10px, 10px);
+ transform: rotate(90deg);
+ /* right: 50px; */
+ color: #fff;
+}
+
+.left-bottom h4 {
+ color: #fff;
+ font-size: 19px;
+ padding: 6px 10px 0 10px;
+ font-weight: 400;
 }
