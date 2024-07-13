@@ -104,3 +104,29 @@ document.addEventListener('DOMContentLoaded', function () {
  // Initial check
  checkAndAnimateCounts();
 });
+
+// ---------- gellery ---------- 
+// JavaScript for opening modal on image click
+var modal = new bootstrap.Modal(document.getElementById('photoModal'), {
+ keyboard: true
+});
+document.querySelectorAll('.gallery img').forEach(item => {
+ item.addEventListener('click', event => {
+  modal.show();
+ });
+});
+
+// --------- video -gellery ----- 
+// JavaScript for opening modal with embedded video
+var modal = new bootstrap.Modal(document.getElementById('videoModal'), {
+ keyboard: true
+});
+
+document.querySelectorAll('.gallery-thumbnail').forEach(item => {
+ item.addEventListener('click', event => {
+  var videoId = item.getAttribute('data-video-id');
+  var modalBody = document.getElementById('videoModalBody');
+  modalBody.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen class="modal-video"></iframe>';
+  modal.show();
+ });
+});
