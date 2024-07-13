@@ -52,3 +52,55 @@ setInterval(updateTime, 1000);
 
 // time show code end here ------------------------------------
 
+document.addEventListener('DOMContentLoaded', function () {
+ // Function to check if an element is in the viewport
+ function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+   rect.top >= 0 &&
+   rect.left >= 0 &&
+   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+ }
+
+ // Function to animate counting up
+ function countUp(element) {
+  const target = +element.getAttribute('data-target');
+  const duration = 2000;
+  const start = 0;
+  let startTime = null;
+
+  function animation(currentTime) {
+   if (startTime === null) startTime = currentTime;
+   const progress = currentTime - startTime;
+   const count = Math.min(Math.floor((progress / duration) * target), target);
+   element.textContent = count;
+   if (progress < duration) {
+    requestAnimationFrame(animation);
+   } else {
+    element.textContent = target;
+   }
+  }
+  requestAnimationFrame(animation);
+ }
+
+ // Get all count elements
+ const counts = document.querySelectorAll('.count');
+ let counted = false;
+
+ // Function to check and animate counts
+ function checkAndAnimateCounts() {
+  if (!counted && isInViewport(document.querySelector('.stats'))) {
+   counts.forEach(countUp);
+   counted = true;
+  }
+ }
+
+ // Event listeners
+ window.addEventListener('scroll', checkAndAnimateCounts);
+ window.addEventListener('resize', checkAndAnimateCounts);
+
+ // Initial check
+ checkAndAnimateCounts();
+});

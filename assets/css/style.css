@@ -625,7 +625,7 @@ button:focus:not(:focus-visible) {
 }
 
 .bg_light_blue2 {
-	background-color: #F4F9FC !important;
+	background-color: #14452f !important;
 }
 
 .bg_blue {
@@ -4650,7 +4650,7 @@ footer {
 }
 
 .footer_dark {
-	background-color: #202325;
+	background-color: #14452f;
 	position: relative;
 }
 
@@ -8587,6 +8587,7 @@ blockquote p:last-child {
 
 .trading_img {
 	margin-top: -40px;
+	border-radius: 10px;
 }
 
 .term_conditions h6 {
